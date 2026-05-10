@@ -14,7 +14,7 @@ export function GlassNavbar() {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="rounded-full border border-white/20 bg-white/5 px-6 py-3 backdrop-blur-md flex items-center justify-between shadow-[0_4px_24px_0_rgba(0,0,0,0.1)] relative z-50"
+        className="rounded-full border border-white/20 bg-white/5 px-6 py-3 backdrop-blur-md flex items-center justify-between shadow-[0_4px_24px_0_rgba(0,0,0,0.1)] relative z-50 w-[85%] max-w-[400px] md:w-auto md:max-w-none mx-auto"
       >
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6 text-sm font-light text-white/80 tracking-wide">
@@ -25,7 +25,7 @@ export function GlassNavbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <div className="md:hidden flex items-center justify-between w-full min-w-[200px]">
+        <div className="md:hidden flex items-center justify-between w-full">
           <span className="text-white font-medium tracking-widest text-xs">DISRUPTIVE</span>
           <button onClick={() => setIsOpen(!isOpen)} className="text-white p-1 focus:outline-none">
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

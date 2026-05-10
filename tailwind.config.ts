@@ -71,8 +71,8 @@ const config = {
           to: { height: "0" },
         },
         "slow-pan": {
-          "0%": { transform: "scale(1.05) translate(0, 0)" },
-          "100%": { transform: "scale(1.05) translate(-1%, 1%)" },
+          "0%": { transform: "scale(1.02) translate(0, 0)" },
+          "100%": { transform: "scale(1.02) translate(-1%, 1%)" },
         },
         marquee: {
           "0%": { transform: "translateX(0%)" },

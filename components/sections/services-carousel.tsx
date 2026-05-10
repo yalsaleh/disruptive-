@@ -67,7 +67,7 @@ export function ServicesCarousel() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div id="services" className="w-full py-24 md:py-32 relative overflow-hidden bg-black">
+    <div id="services" className="w-full pt-16 pb-24 md:py-32 relative overflow-hidden bg-black">
       {/* Ethereal Background Glow matching the hero */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-blue-500/5 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent pointer-events-none z-10" />
