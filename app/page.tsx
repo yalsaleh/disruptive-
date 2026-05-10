@@ -29,8 +29,18 @@ export default function Home() {
           <GlassNavbar />
         </div>
 
+        {/* Center Content - The Creative Addition */}
+        <div className="relative z-10 flex flex-col items-center justify-center text-center mt-auto mb-12 md:mb-24 px-4">
+          <h1 className="text-4xl md:text-7xl font-light tracking-tight text-white mb-4 md:mb-6 drop-shadow-2xl">
+            Intelligence, <span className="italic font-serif text-white/80">Applied.</span>
+          </h1>
+          <p className="text-sm md:text-lg text-white/70 font-light max-w-xl mx-auto drop-shadow-md">
+            We build agentic AI systems that don't just chat—they execute.
+          </p>
+        </div>
+
         {/* Bottom Content */}
-        <div className="relative z-10 w-full flex justify-center mt-auto pb-8 md:pb-12">
+        <div className="relative z-10 w-full flex justify-center pb-8 md:pb-12">
           <a href="#services" className="rounded-full border border-white/30 bg-white/5 px-10 py-4 text-sm md:text-base font-medium text-white hover:bg-white/10 hover:scale-105 transition-all duration-300 backdrop-blur-md shadow-[0_4px_24px_0_rgba(0,0,0,0.2)]">
             Start Exploring
           </a>
