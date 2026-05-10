@@ -27,7 +27,7 @@ const STEPS = [
 
 export function ProcessSection() {
   return (
-    <section id="process" className="bg-[#EAE8E3] text-zinc-900 py-32 px-6 md:px-12 rounded-t-[3rem] -mt-12 relative z-30 shadow-[0_-20px_40px_rgba(0,0,0,0.3)]">
+    <section id="process" className="bg-[#EAE8E3] text-zinc-900 py-24 md:py-32 px-6 md:px-12 rounded-t-[2rem] md:rounded-t-[3rem] -mt-6 md:-mt-12 relative z-30 shadow-[0_-20px_40px_rgba(0,0,0,0.3)]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
         
         {/* Left Side: Sticky Title */}
@@ -36,7 +36,7 @@ export function ProcessSection() {
             <span className="text-xs font-mono tracking-[0.2em] text-zinc-500 mb-6 block">
               END-TO-END IMPLEMENTATION
             </span>
-            <h2 className="text-5xl md:text-7xl font-medium tracking-tight leading-[1.1] mb-8">
+            <h2 className="text-4xl md:text-7xl font-medium tracking-tight leading-[1.1] mb-6 md:mb-8">
               From concept <br/>
               <span className="text-zinc-400">to production.</span>
             </h2>

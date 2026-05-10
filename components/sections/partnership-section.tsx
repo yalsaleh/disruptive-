@@ -13,7 +13,7 @@ export function PartnershipSection() {
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
-    <section id="partnership" ref={containerRef} className="relative py-40 bg-black overflow-hidden">
+    <section id="partnership" ref={containerRef} className="relative py-24 md:py-40 bg-black overflow-hidden">
       {/* Massive background text with Parallax */}
       <motion.div 
         style={{ y }}
@@ -68,7 +68,7 @@ export function PartnershipSection() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="group cursor-default"
           >
-            <div className="text-7xl md:text-8xl font-light text-white mb-6 transition-transform group-hover:-translate-y-2 duration-500">
+            <div className="text-6xl md:text-8xl font-light text-white mb-4 md:mb-6 transition-transform group-hover:-translate-y-2 duration-500">
               2.5B<span className="text-green-500 font-serif italic">+</span>
             </div>
             <div className="h-[1px] w-full bg-white/10 mb-6 group-hover:bg-green-500/50 transition-colors duration-500" />
@@ -82,7 +82,7 @@ export function PartnershipSection() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="group cursor-default"
           >
-            <div className="text-7xl md:text-8xl font-light text-white mb-6 transition-transform group-hover:-translate-y-2 duration-500">
+            <div className="text-6xl md:text-8xl font-light text-white mb-4 md:mb-6 transition-transform group-hover:-translate-y-2 duration-500">
               100<span className="text-blue-500 font-serif italic">%</span>
             </div>
             <div className="h-[1px] w-full bg-white/10 mb-6 group-hover:bg-blue-500/50 transition-colors duration-500" />
@@ -96,7 +96,7 @@ export function PartnershipSection() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="group cursor-default"
           >
-            <div className="text-7xl md:text-8xl font-light text-white mb-6 transition-transform group-hover:-translate-y-2 duration-500">
+            <div className="text-6xl md:text-8xl font-light text-white mb-4 md:mb-6 transition-transform group-hover:-translate-y-2 duration-500">
               3<span className="text-pink-500 font-serif italic">x</span>
             </div>
             <div className="h-[1px] w-full bg-white/10 mb-6 group-hover:bg-pink-500/50 transition-colors duration-500" />

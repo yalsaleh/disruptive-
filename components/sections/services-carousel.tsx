@@ -67,7 +67,7 @@ export function ServicesCarousel() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div id="services" className="w-full py-32 relative overflow-hidden bg-black">
+    <div id="services" className="w-full py-24 md:py-32 relative overflow-hidden bg-black">
       {/* Ethereal Background Glow matching the hero */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-blue-500/5 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent pointer-events-none z-10" />
@@ -103,7 +103,7 @@ export function ServicesCarousel() {
                 )}
               >
                 {/* Ultra-minimalist card design */}
-                <div className="h-[520px] border-l border-white/10 pl-8 py-4 flex flex-col justify-between relative overflow-hidden group">
+                <div className="h-[450px] md:h-[520px] border-l border-white/10 pl-6 md:pl-8 py-4 flex flex-col justify-between relative overflow-hidden group">
                   
                   {/* Hover gradient sweep */}
                   <div className="absolute inset-0 bg-gradient-to-r from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
