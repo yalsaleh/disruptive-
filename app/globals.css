@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    /* Updated color scheme to use light grey background and black fonts */
-    --bg-color: hsl(0, 0%, 95%); /* Light grey background */
-    --text-color: hsl(0, 0%, 0%); /* Pure black text */
+    /* Updated color scheme to use black background and white fonts */
+    --bg-color: hsl(0, 0%, 0%); /* Black background */
+    --text-color: hsl(0, 0%, 100%); /* Pure white text */
 
-    /* Updated color palette for light grey theme with black text */
-    --background: 0 0% 95%; /* #f2f2f2 - Light grey background */
-    --foreground: 0 0% 0%; /* #000000 - Pure black text */
+    /* Updated color palette for dark theme */
+    --background: 0 0% 0%; /* #000000 - Black background */
+    --foreground: 0 0% 100%; /* #ffffff - Pure white text */
 
     --card: 0 0% 100%; /* #ffffff - White card background */
     --card-foreground: 0 0% 0%; /* #000000 - Black text for cards */
@@ -147,15 +147,12 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
     box-sizing: border-box;
   }
 
   body {
-    @apply bg-background text-foreground;
-    /* Updated body styling for light grey background with black text */
-    color: var(--text-color);
-    background: var(--bg-color);
+    @apply bg-black text-white;
     transition: 0.3s ease-out;
     overflow-x: hidden;
   }
