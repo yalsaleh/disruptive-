@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="bg-black text-white selection:bg-white/30 selection:text-white">
       {/* HERO SECTION - Minimalist */}
-      <section className="relative h-[85svh] md:h-[100svh] overflow-hidden flex flex-col justify-between p-4 md:p-12 rounded-b-[2rem] md:rounded-none z-20 shadow-2xl">
+      <section className="relative h-[100svh] overflow-hidden flex flex-col justify-between p-4 md:p-12 z-20 shadow-2xl">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
 
         {/* Center Content - The Creative Addition */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center mt-auto mb-8 md:mb-12 px-4">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center mt-auto mb-12 md:mb-12 px-4">
           <h1 className="text-3xl md:text-5xl font-light tracking-tight text-white/90 mb-3 md:mb-4 drop-shadow-2xl">
             Intelligence, <span className="italic font-serif text-white/70">Applied.</span>
           </h1>
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
 
         {/* Bottom Content */}
-        <div className="relative z-10 w-full flex justify-center pb-6 md:pb-8">
+        <div className="relative z-10 w-full flex justify-center pb-12 md:pb-8">
           <a href="#services" className="rounded-full border border-white/30 bg-white/5 px-10 py-4 text-sm md:text-base font-medium text-white hover:bg-white/10 hover:scale-105 transition-all duration-300 backdrop-blur-md shadow-[0_4px_24px_0_rgba(0,0,0,0.2)]">
             Start Exploring
           </a>
