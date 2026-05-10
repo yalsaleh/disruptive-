@@ -30,12 +30,12 @@ export default function Home() {
         </div>
 
         {/* Center Content - The Creative Addition */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center mt-auto mb-12 md:mb-24 px-4">
-          <h1 className="text-4xl md:text-7xl font-light tracking-tight text-white mb-4 md:mb-6 drop-shadow-2xl">
-            Intelligence, <span className="italic font-serif text-white/80">Applied.</span>
+        <div className="relative z-10 flex flex-col items-center justify-center text-center mt-auto mb-12 md:mb-16 px-4">
+          <h1 className="text-3xl md:text-5xl font-light tracking-tight text-white/90 mb-3 md:mb-4 drop-shadow-2xl">
+            Intelligence, <span className="italic font-serif text-white/70">Applied.</span>
           </h1>
-          <p className="text-sm md:text-lg text-white/70 font-light max-w-xl mx-auto drop-shadow-md">
-            We build agentic AI systems that don't just chat—they execute.
+          <p className="text-xs md:text-sm text-white/50 font-light max-w-md mx-auto tracking-wide">
+            Agentic AI systems that execute.
           </p>
         </div>
 
