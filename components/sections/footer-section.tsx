@@ -30,7 +30,7 @@ export function FooterSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            <a href="mailto:f.burhama@disruptv.tech" className="group relative flex items-center justify-center w-32 h-32 md:w-48 md:h-48 rounded-full border border-white/20 bg-white/5 backdrop-blur-md hover:bg-white hover:text-black transition-all duration-500">
+            <a href="https://wa.me/96566363363" target="_blank" rel="noopener noreferrer" className="group relative flex items-center justify-center w-32 h-32 md:w-48 md:h-48 rounded-full border border-white/20 bg-white/5 backdrop-blur-md hover:bg-white hover:text-black transition-all duration-500">
               <span className="text-lg font-light tracking-tight">Let's Talk</span>
               <ArrowUpRight className="absolute top-8 right-8 w-6 h-6 opacity-0 -translate-x-4 translate-y-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500" />
             </a>
