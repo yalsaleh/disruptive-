@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { GlassNavbar } from "@/components/layout/glass-navbar";
-import { ServicesCarousel } from "@/components/sections/services-carousel";
+import { ServicesSection } from "@/components/sections/services-section";
 import { PartnershipSection } from "@/components/sections/partnership-section";
 import { MarqueeSection } from "@/components/sections/marquee-section";
 import { ProcessSection } from "@/components/sections/process-section";
@@ -52,10 +52,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES CAROUSEL SECTION */}
-      <section className="relative z-20 bg-black">
-        <ServicesCarousel />
-      </section>
+      {/* SERVICES SECTION (Expanding Accordion) */}
+      <ServicesSection />
 
       {/* META PARTNERSHIP SECTION */}
       <PartnershipSection />
