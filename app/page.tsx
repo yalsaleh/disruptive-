@@ -20,8 +20,13 @@ export default function Home() {
             priority
             className="object-cover md:object-[center_center] object-[center_30%] animate-slow-pan"
           />
-          {/* Subtle gradient overlay at the bottom to ensure button visibility */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent md:from-black/80" />
+          {/* Subtle gradient overlay customized for better image visibility */}
+          <div 
+            className="absolute inset-0" 
+            style={{
+              background: "linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.12) 40%, rgba(0,0,0,0.45) 100%)"
+            }}
+          />
         </div>
 
         {/* Top Nav */}
