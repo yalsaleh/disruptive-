@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type CardData = {
@@ -59,6 +60,14 @@ export function ServicesCarousel() {
     setSelectedIndex(emblaApi.selectedScrollSnap());
   }, [emblaApi]);
 
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
   useEffect(() => {
     if (!emblaApi) return;
     onSelect();
@@ -72,17 +81,32 @@ export function ServicesCarousel() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-blue-500/5 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent pointer-events-none z-10" />
       
-      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-24 relative z-20">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16 md:mb-24 relative z-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-4xl md:text-5xl font-light tracking-tight text-white mb-6"
+          className="text-4xl md:text-5xl font-light tracking-tight text-white"
         >
           Beyond Chatbots.<br />
           <span className="text-white/40">Real Operational Impact.</span>
         </motion.h2>
+
+        <div className="hidden md:flex items-center gap-4">
+          <button 
+            onClick={scrollPrev}
+            className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all duration-300"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button 
+            onClick={scrollNext}
+            className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all duration-300"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </div>
       </div>
 
       <div className="overflow-hidden cursor-grab active:cursor-grabbing relative z-20" ref={emblaRef}>

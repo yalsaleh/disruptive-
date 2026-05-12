@@ -50,6 +50,12 @@ export function FooterSection() {
               <a href="mailto:f.burhama@disruptv.tech" className="text-sm font-mono text-white/60 hover:text-white transition-colors">
                 f.burhama@disruptv.tech
               </a>
+              <a href="mailto:aziz@disruptv.tech" className="text-sm font-mono text-white/60 hover:text-white transition-colors">
+                aziz@disruptv.tech
+              </a>
+              <a href="https://wa.me/96566363363" target="_blank" rel="noopener noreferrer" className="text-sm font-mono text-white/60 hover:text-white transition-colors mt-2">
+                +965 6636 3363
+              </a>
             </div>
           </div>
 
@@ -65,7 +71,6 @@ export function FooterSection() {
           <div className="flex flex-col gap-4">
             <span className="text-xs font-mono text-white/40 tracking-widest uppercase mb-2">Connect</span>
             <a href="https://instagram.com/disruptv.tech" target="_blank" rel="noopener noreferrer" className="text-sm font-light text-white/70 hover:text-white transition-colors">Instagram</a>
-            <a href="#" className="text-sm font-light text-white/70 hover:text-white transition-colors">LinkedIn</a>
             <div className="mt-8 text-xs font-mono text-white/30">
               © 2026 DISRUPTIVE TECHNOLOGIES. <br/> ALL RIGHTS RESERVED.
             </div>
