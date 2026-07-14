@@ -13,9 +13,9 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "1rem", // Reduced padding from 2rem to 1rem
+      padding: "1rem",
       screens: {
-        "2xl": "100%", // Changed from 1400px to 100% for full width
+        "2xl": "1200px",
       },
     },
     extend: {
@@ -28,8 +28,6 @@ const config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          dark: "hsl(var(--primary-dark))",
-          light: "hsl(var(--primary-light))", // Added primary-light
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -55,6 +53,25 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        brand: {
+          sage: "#6f7662",
+          "sage-bright": "#929a80",
+          "sage-soft": "#e1e4d9",
+          mist: "#e8e9e4",
+          fog: "#686a64",
+          ink: "#111210",
+          paper: "#fafaf7",
+          wash: "#f2f2ec",
+          blue: "#81924d",
+          "blue-bright": "#b7d76a",
+          "blue-soft": "#edf3d7",
+          "blue-deep": "#53612d",
+        },
+      },
+      fontFamily: {
+        display: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],
+        body: ["var(--font-body)", "ui-sans-serif", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "ui-serif", "Georgia", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -70,10 +87,6 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "slow-pan": {
-          "0%": { transform: "scale(1.02) translate(0, 0)" },
-          "100%": { transform: "scale(1.02) translate(-1%, 1%)" },
-        },
         marquee: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-50%)" },
@@ -82,8 +95,7 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "slow-pan": "slow-pan 30s ease-in-out infinite alternate",
-        marquee: "marquee 20s linear infinite",
+        marquee: "marquee 32s linear infinite",
       },
     },
   },

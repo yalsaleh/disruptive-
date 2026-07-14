@@ -1,84 +1,107 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
+import {
+  IconDesign,
+  IconDiscover,
+  IconIntegrate,
+  IconLaunch,
+} from "@/components/ui/brand-icons"
+import { ScrollReveal } from "@/components/ui/scroll-reveal"
 
 const STEPS = [
-  { 
-    id: "01", 
-    title: "Discovery & Strategy", 
-    desc: "We map your operational bottlenecks and design AI workflows that actually solve them. No fluff, just practical architecture." 
+  {
+    id: "01",
+    title: "Discovery",
+    desc: "Map bottlenecks and design AI workflows that actually solve them.",
+    detail: "We sit with your ops, spot the friction, and define what an agent should own end-to-end.",
+    icon: IconDiscover,
   },
-  { 
-    id: "02", 
-    title: "Agent Design", 
-    desc: "Building the brain. We configure reasoning capabilities, tool access, and strict ethical guardrails tailored to your business rules." 
+  {
+    id: "02",
+    title: "Agent design",
+    desc: "Configure reasoning, tools, and guardrails for your business rules.",
+    detail: "Tools, memory, and escalation paths — shaped around how your team already works.",
+    icon: IconDesign,
   },
-  { 
-    id: "03", 
-    title: "Meta Integration", 
-    desc: "Connecting the agent to WhatsApp, Instagram, or internal tools via our AI Octopus infrastructure for seamless omnichannel deployment." 
+  {
+    id: "03",
+    title: "Integration",
+    desc: "Connect to WhatsApp, Meta, or internal systems via AI Octopus.",
+    detail: "Native channel hooks and system wiring so the agent lives where work already happens.",
+    icon: IconIntegrate,
   },
-  { 
-    id: "04", 
-    title: "Deployment & Iteration", 
-    desc: "We don't just hand over the keys. We monitor, refine, and scale the system as your business grows and adapts." 
-  }
-];
+  {
+    id: "04",
+    title: "Launch",
+    desc: "Deploy, monitor, and iterate as your operations grow.",
+    detail: "Ship carefully, watch the signals, and tighten the loop as volume scales.",
+    icon: IconLaunch,
+  },
+]
 
 export function ProcessSection() {
   return (
-    <section id="process" className="bg-[#EAE8E3] text-zinc-900 py-24 md:py-32 px-6 md:px-12 rounded-t-[2rem] md:rounded-t-[3rem] -mt-6 md:-mt-12 relative z-30 shadow-[0_-20px_40px_rgba(0,0,0,0.3)]">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
-        
-        {/* Left Side: Sticky Title */}
-        <div className="lg:col-span-5">
-          <div className="sticky top-32">
-            <span className="text-xs font-mono tracking-[0.2em] text-zinc-500 mb-6 block">
-              END-TO-END IMPLEMENTATION
-            </span>
-            <h2 className="text-4xl md:text-7xl font-medium tracking-tight leading-[1.1] mb-6 md:mb-8">
-              From concept <br/>
-              <span className="text-zinc-400">to production.</span>
-            </h2>
-            <p className="text-lg text-zinc-600 font-light max-w-md leading-relaxed">
-              We handle the entire lifecycle. No fragmented tools or half-finished bots. Just end-to-end systems that work flawlessly inside your operations.
+    <section
+      id="process"
+      className="relative flex flex-col justify-center border-t border-brand-sage/20 bg-brand-paper px-5 py-24 md:px-8 md:py-36"
+    >
+      <div className="relative mx-auto grid w-full max-w-[1280px] gap-14 lg:grid-cols-12 lg:items-start lg:gap-20">
+        <ScrollReveal direction="left" className="lg:sticky lg:top-32 lg:col-span-4">
+          <p className="mb-5 font-body text-xs font-semibold uppercase tracking-[0.18em] text-brand-fog">
+            04 / Process
+          </p>
+          <h2 className="font-display text-4xl font-semibold leading-[0.98] tracking-[-0.045em] text-brand-ink md:text-5xl lg:text-6xl">
+            Four moves.
+            <br />
+            <span className="text-brand-sage">One clear path.</span>
+          </h2>
+          <p className="mt-6 max-w-sm font-body text-sm leading-relaxed text-brand-fog md:text-base">
+            Every stage has an outcome. Nothing is hidden behind process theatre.
+          </p>
+
+          <div className="mt-10 flex items-center gap-4 border-t border-brand-sage/20 pt-5">
+            <span className="h-2 w-2 bg-brand-sage" />
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-fog">
+              Discovery to live operation
             </p>
-
-            <a href="mailto:f.burhama@disruptv.tech" className="inline-block mt-12 rounded-full border border-zinc-300 bg-transparent px-8 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-900 hover:text-white transition-all duration-500">
-              Start Your Project
-            </a>
           </div>
-        </div>
-        
-        {/* Right Side: Scrolling Steps */}
-        <div className="lg:col-span-7 flex flex-col gap-12 pt-12 lg:pt-0">
-          {STEPS.map((step, i) => (
-            <motion.div 
-              key={step.id}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group border-b border-zinc-300 pb-12 last:border-0"
-            >
-              <div className="flex flex-col md:flex-row items-start gap-6 md:gap-12">
-                <span className="text-3xl font-mono text-zinc-300 group-hover:text-zinc-900 transition-colors duration-500">
-                  {step.id}
-                </span>
-                <div>
-                  <h3 className="text-3xl md:text-4xl font-light mb-6 tracking-tight text-zinc-900">
-                    {step.title}
-                  </h3>
-                  <p className="text-xl text-zinc-500 font-light leading-relaxed group-hover:text-zinc-700 transition-colors duration-500">
-                    {step.desc}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        </ScrollReveal>
 
+        <div className="border-t border-brand-sage/25 lg:col-span-8">
+          {STEPS.map((item, i) => {
+            const StepIcon = item.icon
+            return (
+              <ScrollReveal key={item.id} delay={i * 0.06} amount={0.12}>
+                <article className="group grid gap-6 border-b border-brand-sage/25 py-8 transition-colors hover:bg-brand-wash/60 md:grid-cols-12 md:gap-5 md:px-5 md:py-10">
+                  <div className="flex items-start justify-between md:col-span-2">
+                    <span className="font-display text-4xl font-semibold leading-none tracking-[-0.05em] text-brand-sage/55 md:text-5xl">
+                      {item.id}
+                    </span>
+                    <StepIcon className="h-5 w-5 text-brand-sage md:hidden" />
+                  </div>
+
+                  <div className="md:col-span-4">
+                    <StepIcon className="mb-5 hidden h-5 w-5 text-brand-sage md:block" />
+                    <h3 className="font-display text-2xl font-semibold tracking-tight text-brand-ink md:text-3xl">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-brand-fog">
+                      {item.desc}
+                    </p>
+                  </div>
+
+                  <div className="md:col-span-6 md:pt-10">
+                    <p className="max-w-lg text-sm leading-relaxed text-brand-fog md:text-base">
+                      {item.detail}
+                    </p>
+                    <div className="mt-6 h-px w-8 bg-brand-sage transition-all duration-300 group-hover:w-16" />
+                  </div>
+                </article>
+              </ScrollReveal>
+            )
+          })}
+        </div>
       </div>
     </section>
-  );
+  )
 }

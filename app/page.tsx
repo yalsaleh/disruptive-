@@ -1,71 +1,31 @@
-import Image from "next/image";
-import { GlassNavbar } from "@/components/layout/glass-navbar";
-import { ServicesSection } from "@/components/sections/services-section";
-import { PartnershipSection } from "@/components/sections/partnership-section";
-import { MarqueeSection } from "@/components/sections/marquee-section";
-import { ProcessSection } from "@/components/sections/process-section";
-import { FooterSection } from "@/components/sections/footer-section";
+import { SiteHeader } from "@/components/layout/site-header"
+import { HeroSection } from "@/components/sections/hero-section"
+import { FeaturesSection } from "@/components/sections/features-section"
+import { PartnershipSection } from "@/components/sections/partnership-section"
+import { BeliefsSection } from "@/components/sections/beliefs-section"
+import { ProcessSection } from "@/components/sections/process-section"
+import { CtaSection } from "@/components/sections/cta-section"
+import { FooterSection } from "@/components/sections/footer-section"
 
 export default function Home() {
   return (
-    <main className="bg-black text-white selection:bg-white/30 selection:text-white">
-      {/* HERO SECTION - Minimalist */}
-      <section className="relative h-[100svh] overflow-hidden flex flex-col justify-between p-4 md:p-12 z-20 shadow-2xl">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/hero-bg.png"
-            alt="Background"
-            fill
-            priority
-            className="object-cover md:object-[center_center] object-[center_30%] animate-slow-pan"
-          />
-          {/* Subtle gradient overlay customized for better image visibility */}
-          <div 
-            className="absolute inset-0" 
-            style={{
-              background: "linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.12) 40%, rgba(0,0,0,0.45) 100%)"
-            }}
-          />
-        </div>
-
-        {/* Top Nav */}
-        <div className="relative z-10 flex justify-center w-full mt-4 md:mt-2">
-          <GlassNavbar />
-        </div>
-
-        {/* Center Content - The Creative Addition */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center mt-auto mb-12 md:mb-12 px-4">
-          <h1 className="text-3xl md:text-5xl font-light tracking-tight text-white/90 mb-3 md:mb-4 drop-shadow-2xl">
-            Intelligence, <span className="italic font-serif text-white/70">Applied.</span>
-          </h1>
-          <p className="text-xs md:text-sm text-white/50 font-light max-w-md mx-auto tracking-wide">
-            Agentic AI systems that execute.
-          </p>
-        </div>
-
-        {/* Bottom Content */}
-        <div className="relative z-10 w-full flex justify-center pb-12 md:pb-8">
-          <a href="#services" className="rounded-full border border-white/30 bg-white/5 px-10 py-4 text-sm md:text-base font-medium text-white hover:bg-white/10 hover:scale-105 transition-all duration-300 backdrop-blur-md shadow-[0_4px_24px_0_rgba(0,0,0,0.2)]">
-            Start Exploring
-          </a>
-        </div>
-      </section>
-
-      {/* SERVICES SECTION (Expanding Accordion) */}
-      <ServicesSection />
-
-      {/* META PARTNERSHIP SECTION */}
-      <PartnershipSection />
-
-      {/* MARQUEE SECTION */}
-      <MarqueeSection />
-
-      {/* PROCESS / IMPLEMENTATION SECTION (Light Theme) */}
-      <ProcessSection />
-
-      {/* FOOTER SECTION */}
-      <FooterSection />
-    </main>
-  );
+    <>
+      <a
+        href="#main-content"
+        className="fixed left-4 top-4 z-[100] -translate-y-24 bg-brand-ink px-4 py-3 text-sm font-semibold text-white transition-transform focus:translate-y-0"
+      >
+        Skip to content
+      </a>
+      <SiteHeader />
+      <main id="main-content" className="relative min-h-screen bg-brand-paper text-brand-ink">
+        <HeroSection />
+        <FeaturesSection />
+        <PartnershipSection />
+        <BeliefsSection />
+        <ProcessSection />
+        <CtaSection />
+        <FooterSection />
+      </main>
+    </>
+  )
 }

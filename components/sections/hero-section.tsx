@@ -1,64 +1,110 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
+"use client"
+
+import Link from "next/link"
+import { motion, useReducedMotion } from "framer-motion"
+
+const EASE = [0.16, 1, 0.3, 1] as const
 
 export function HeroSection() {
+  const reduceMotion = useReducedMotion()
+
+  const reveal = (delay: number, from: "left" | "right" = "left") => ({
+    initial: reduceMotion
+      ? false
+      : {
+          opacity: 0,
+          clipPath: from === "left" ? "inset(0 100% 0 0)" : "inset(0 0 0 100%)",
+        },
+    animate: { opacity: 1, clipPath: "inset(0 0 0 0)" },
+    transition: reduceMotion ? { duration: 0 } : { delay, duration: 0.9, ease: EASE },
+  })
+
   return (
-    <section className="relative h-screen flex flex-col overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero-astria.png"
-          alt="Ethereal Landscape"
-          fill
-          style={{
-            objectFit: "cover",
-            objectPosition: "center"
-          }}
-          priority
-          quality={100}
-        />
-        {/* Darker Overlay for Contrast */}
-        <div className="absolute inset-0 bg-black/40" />
-        {/* Cinematic Overlay Gradient - Subtle bottom fade for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-      </div>
-
-      {/* Main Content Container */}
-      <div className="w-full max-w-[1920px] relative z-20 flex-grow flex flex-col justify-between mx-auto px-12 py-16">
-        
-        {/* Top/Left Content - Title and Tagline */}
-        <div className="pt-32 pl-4 animate-in fade-in slide-in-from-bottom-10 duration-1000">
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-white mb-4 drop-shadow-2xl">
-            Quiet Intelligence
-          </h1>
-          <p className="text-xl md:text-2xl text-white/70 font-light tracking-wide drop-shadow-lg max-w-2xl">
-            Systems that think. Technology that works quietly.
+    <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-[#f3f3ed] md:min-h-[calc(100svh-4.5rem)]">
+      <div className="relative mx-auto flex min-h-[inherit] max-w-[1280px] flex-col px-5 pb-8 pt-10 md:px-8 md:pb-10 md:pt-12">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="grid grid-cols-12 items-end border-b border-brand-ink/20 pb-4"
+        >
+          <p className="col-span-7 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-sage">
+            Agentic automation
           </p>
+          <p className="col-span-5 text-right text-[11px] font-medium uppercase tracking-[0.12em] text-brand-fog">
+            Designed responsibly / Built to work
+          </p>
+        </motion.div>
+
+        <div className="relative flex flex-1 flex-col justify-center py-10 md:py-12">
+          <h1 className="font-display font-semibold leading-[0.82] tracking-[-0.075em] text-brand-ink">
+            <motion.span
+              {...reveal(0.05)}
+              className="block text-[clamp(3.8rem,10.8vw,9.4rem)]"
+            >
+              Automate more<span className="text-brand-sage">.</span>
+            </motion.span>
+
+            <motion.span
+              {...reveal(0.14, "right")}
+              className="ml-[8%] block text-[clamp(3.8rem,10.8vw,9.4rem)] md:ml-[16%]"
+            >
+              Spend{" "}
+              <span className="font-serif-accent font-normal italic tracking-[-0.045em] text-brand-sage">
+                less.
+              </span>
+            </motion.span>
+
+            <motion.span
+              {...reveal(0.23)}
+              className="ml-[2%] block text-[clamp(3.8rem,10.8vw,9.4rem)] md:ml-[5%]"
+            >
+              Move faster<span className="text-brand-blue-bright">.</span>
+            </motion.span>
+          </h1>
+
+          <motion.div
+            initial={reduceMotion ? false : { scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={reduceMotion ? { duration: 0 } : { delay: 0.34, duration: 0.8, ease: EASE }}
+            className="mt-8 h-px origin-left bg-brand-ink/20"
+          />
         </div>
 
-        {/* Bottom Content */}
-        <div className="space-y-8">
-          {/* Centered Button */}
-          <div className="flex justify-center animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-200">
-            <Button variant="outline" size="lg" className="rounded-full border-white/30 text-white bg-transparent hover:bg-white/10 hover:border-white/50 px-12 h-16 text-lg font-light tracking-wide backdrop-blur-sm transition-all hover:scale-105">
-              Start Exploring
-            </Button>
-          </div>
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={reduceMotion ? { duration: 0 } : { delay: 0.42, duration: 0.65, ease: EASE }}
+          className="grid gap-8 border-t border-brand-ink/20 pt-7 md:grid-cols-12 md:items-end"
+        >
+          <p className="max-w-2xl text-base leading-relaxed text-brand-fog md:col-span-6 md:text-lg">
+            High-quality AI systems that understand context, make decisions, and complete real
+            work—without compromising trust, accuracy, or human oversight.
+          </p>
 
-          {/* Bottom Text - Left and Right */}
-          <div className="flex items-end justify-between w-full animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-300">
-            {/* Bottom Left */}
-            <p className="text-sm text-white/60 font-light max-w-xs">
-              Clarity begins with a good question.
-            </p>
-
-            {/* Bottom Right */}
-            <p className="text-sm text-white/60 font-light">
-              Disruptive Technologies ©2025
+          <div className="hidden md:col-span-2 md:block">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-sage">
+              Systems / Channels / Oversight
             </p>
           </div>
-        </div>
-        
+
+          <div className="flex flex-wrap items-center gap-6 md:col-span-4 md:justify-end">
+            <Link
+              href="#start"
+              className="group inline-flex items-center gap-4 bg-brand-ink px-6 py-4 text-xs font-semibold uppercase tracking-[0.08em] text-white"
+            >
+              Start a project
+              <span className="transition-transform group-hover:translate-x-1">↗</span>
+            </Link>
+            <Link
+              href="#solutions"
+              className="group inline-flex items-center gap-3 border-b border-brand-ink/30 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-brand-ink"
+            >
+              Explore systems
+              <span className="transition-transform group-hover:translate-x-1">→</span>
+            </Link>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
