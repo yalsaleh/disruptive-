@@ -51,16 +51,23 @@ export default function ServicesPage() {
                   transition={{ delay: 0.08 + i * 0.06, duration: 0.55 }}
                   className="group relative overflow-hidden border border-brand-ink/15 bg-brand-wash p-7 transition-colors duration-300 hover:bg-brand-sage-soft/45 md:p-8"
                 >
-                  <div className="absolute inset-x-0 top-0 h-1" style={{ background: service.accent }} />
+                  {!service.hideAccent && (
+                    <div className="absolute inset-x-0 top-0 h-1" style={{ background: service.accent }} />
+                  )}
 
                   <div className="relative z-10 flex h-full flex-col">
-                    <div className="mb-6 flex h-28 items-center justify-center px-4">
+                    <div className="mb-6 flex min-h-[9.5rem] items-center justify-center px-2">
                       <Image
                         src={service.logo}
                         alt={service.name}
-                        width={220}
-                        height={160}
-                        className="h-auto max-h-24 w-auto object-contain"
+                        width={480}
+                        height={360}
+                        unoptimized
+                        priority={i < 3}
+                        className={
+                          service.logoClassName ??
+                          "h-auto max-h-28 w-auto max-w-[220px] object-contain"
+                        }
                       />
                     </div>
 
