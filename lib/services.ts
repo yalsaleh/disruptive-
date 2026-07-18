@@ -44,9 +44,9 @@ export const SERVICES: Service[] = [
     tagline: "Hiring and people, organized.",
     description:
       "Put every application on a filterable, searchable list, review hired employees, keep track of your team, and give HR the tools to run hiring with clarity.",
-    logo: "/brand/wathefni-mark.png",
-    logoWidth: 606,
-    logoHeight: 520,
+    logo: "/brand/wathefni.png",
+    logoWidth: 900,
+    logoHeight: 768,
     accent: "#6B7280",
     status: "live",
   },

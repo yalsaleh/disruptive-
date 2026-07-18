@@ -58,15 +58,16 @@ export function OwnedServicesSection() {
                 style={{ background: primary.accent }}
               />
               <div className="relative z-10 flex min-h-[200px] flex-1 items-center justify-center px-8 py-10 md:min-h-[260px] md:px-12">
-                <Image
-                  src={primary.logo}
-                  alt={primary.name}
-                  width={primary.logoWidth}
-                  height={primary.logoHeight}
-                  unoptimized
-                  className="h-auto max-h-40 w-auto max-w-[240px] object-contain md:max-h-48 md:max-w-[280px]"
-                  style={{ width: "auto", height: "auto" }}
-                />
+                <div className="relative h-36 w-full max-w-[260px] md:h-44 md:max-w-[300px]">
+                  <Image
+                    src={primary.logo}
+                    alt={primary.name}
+                    fill
+                    unoptimized
+                    sizes="300px"
+                    className="object-contain object-center"
+                  />
+                </div>
               </div>
               <div className="relative z-10 flex flex-1 flex-col justify-center border-t border-white/40 px-7 py-8 md:border-l md:border-t-0 md:px-10 md:py-12">
                 <div className="mb-3 flex items-center gap-2">
