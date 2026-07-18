@@ -51,15 +51,21 @@ export default function ServicesPage() {
                   transition={{ delay: 0.08 + i * 0.06, duration: 0.55 }}
                   className="group relative flex h-full flex-col border border-brand-ink/12 bg-white p-8 transition-colors duration-300 hover:border-brand-ink/25 md:p-9"
                 >
-                  <div className="mb-8 flex h-28 items-center justify-center border-b border-brand-ink/10 pb-8">
+                  <div className="mb-8 flex h-24 shrink-0 items-center justify-center border-b border-brand-ink/10 pb-8">
                     <Image
                       src={service.logo}
                       alt={service.name}
-                      width={320}
-                      height={160}
+                      width={service.logoWidth}
+                      height={service.logoHeight}
                       unoptimized
                       priority={i < 3}
-                      className="mx-auto h-[4.5rem] w-auto max-w-[220px] object-contain"
+                      className="object-contain"
+                      style={{
+                        width: "auto",
+                        height: "auto",
+                        maxHeight: "4rem",
+                        maxWidth: "12.5rem",
+                      }}
                     />
                   </div>
 

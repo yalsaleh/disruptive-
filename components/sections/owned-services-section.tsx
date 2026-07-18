@@ -61,9 +61,11 @@ export function OwnedServicesSection() {
                 <Image
                   src={primary.logo}
                   alt={primary.name}
-                  width={320}
-                  height={230}
-                  className="h-auto w-[min(70%,240px)] object-contain md:w-[min(80%,280px)]"
+                  width={primary.logoWidth}
+                  height={primary.logoHeight}
+                  unoptimized
+                  className="h-auto max-h-40 w-auto max-w-[240px] object-contain md:max-h-48 md:max-w-[280px]"
+                  style={{ width: "auto", height: "auto" }}
                 />
               </div>
               <div className="relative z-10 flex flex-1 flex-col justify-center border-t border-white/40 px-7 py-8 md:border-l md:border-t-0 md:px-10 md:py-12">
