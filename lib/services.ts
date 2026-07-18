@@ -7,10 +7,6 @@ export type Service = {
   accent: string
   href?: string
   status: "live" | "soon"
-  /** Tailwind classes for the logo image sizing */
-  logoClassName?: string
-  /** Hide the colored top accent bar on the card */
-  hideAccent?: boolean
 }
 
 /** Add new owned products here — they appear on /services automatically. */
@@ -21,10 +17,9 @@ export const SERVICES: Service[] = [
     tagline: "Connectivity, simplified.",
     description:
       "Our eSIM and connectivity brand — built for seamless mobile access with a signal-strong identity.",
-    logo: "/brand/yalla-sim.png",
+    logo: "/brand/yalla-sim.svg",
     accent: "#FF9815",
     status: "live",
-    logoClassName: "h-auto max-h-28 w-auto max-w-[200px] object-contain",
   },
   {
     id: "mnaqsa",
@@ -35,8 +30,6 @@ export const SERVICES: Service[] = [
     logo: "/brand/mnaqsa.svg",
     accent: "#111210",
     status: "live",
-    hideAccent: true,
-    logoClassName: "mx-auto h-auto max-h-16 w-full max-w-[260px] object-contain",
   },
   {
     id: "wathefni",
@@ -44,9 +37,8 @@ export const SERVICES: Service[] = [
     tagline: "Hiring and people, organized.",
     description:
       "Put every application on a filterable, searchable list, review hired employees, keep track of your team, and give HR the tools to run hiring with clarity.",
-    logo: "/brand/wathefni.png",
+    logo: "/brand/wathefni.svg",
     accent: "#6B7280",
     status: "live",
-    logoClassName: "h-auto max-h-40 w-auto max-w-[280px] object-contain",
   },
 ]

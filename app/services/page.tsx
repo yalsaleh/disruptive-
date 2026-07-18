@@ -49,66 +49,55 @@ export default function ServicesPage() {
                   initial={{ opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.08 + i * 0.06, duration: 0.55 }}
-                  className="group relative overflow-hidden border border-brand-ink/15 bg-brand-wash p-7 transition-colors duration-300 hover:bg-brand-sage-soft/45 md:p-8"
+                  className="group relative flex h-full flex-col border border-brand-ink/12 bg-white p-8 transition-colors duration-300 hover:border-brand-ink/25 md:p-9"
                 >
-                  {!service.hideAccent && (
-                    <div className="absolute inset-x-0 top-0 h-1" style={{ background: service.accent }} />
-                  )}
-
-                  <div className="relative z-10 flex h-full flex-col">
-                    <div className="mb-6 flex min-h-[9.5rem] items-center justify-center px-2">
-                      <Image
-                        src={service.logo}
-                        alt={service.name}
-                        width={480}
-                        height={360}
-                        unoptimized
-                        priority={i < 3}
-                        className={
-                          service.logoClassName ??
-                          "h-auto max-h-28 w-auto max-w-[220px] object-contain"
-                        }
-                      />
-                    </div>
-
-                    <div className="mb-2 flex items-center gap-2">
-                      <h2 className="font-display text-xl font-semibold tracking-tight text-brand-ink">
-                        {service.name}
-                      </h2>
-                      <span
-                        className="px-2 py-0.5 font-body text-[10px] font-semibold uppercase tracking-wider text-white"
-                        style={{ background: service.accent }}
-                      >
-                        {service.status === "live" ? "Live" : "Soon"}
-                      </span>
-                    </div>
-                    <p className="font-body text-sm font-medium text-brand-fog">
-                      {service.tagline}
-                    </p>
-                    <p className="mt-3 flex-1 font-body text-sm leading-relaxed text-brand-fog/90">
-                      {service.description}
-                    </p>
-
-                    {service.href ? (
-                      <a
-                        href={service.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-glass mt-6 w-fit px-5 py-2.5 text-sm"
-                      >
-                        Visit
-                        <ArrowUpRight className="h-3.5 w-3.5" />
-                      </a>
-                    ) : (
-                      <p className="mt-6 font-body text-xs font-medium text-brand-fog/70">
-                        Part of the disruptive family
-                      </p>
-                    )}
+                  <div className="mb-8 flex h-28 items-center justify-center border-b border-brand-ink/10 pb-8">
+                    <Image
+                      src={service.logo}
+                      alt={service.name}
+                      width={320}
+                      height={160}
+                      unoptimized
+                      priority={i < 3}
+                      className="mx-auto h-[4.5rem] w-auto max-w-[220px] object-contain"
+                    />
                   </div>
+
+                  <div className="mb-3 flex flex-wrap items-center gap-2.5">
+                    <h2 className="font-display text-xl font-semibold tracking-tight text-brand-ink">
+                      {service.name}
+                    </h2>
+                    <span
+                      className="px-2 py-0.5 font-body text-[10px] font-semibold uppercase tracking-wider text-white"
+                      style={{ background: service.accent }}
+                    >
+                      {service.status === "live" ? "Live" : "Soon"}
+                    </span>
+                  </div>
+
+                  <p className="font-body text-sm font-medium text-brand-fog">{service.tagline}</p>
+                  <p className="mt-3 flex-1 font-body text-sm leading-relaxed text-brand-fog/90">
+                    {service.description}
+                  </p>
+
+                  {service.href ? (
+                    <a
+                      href={service.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-glass mt-8 w-fit px-5 py-2.5 text-sm"
+                    >
+                      Visit
+                      <ArrowUpRight className="h-3.5 w-3.5" />
+                    </a>
+                  ) : (
+                    <p className="mt-8 font-body text-xs font-medium text-brand-fog/70">
+                      Part of the disruptive family
+                    </p>
+                  )}
                 </motion.article>
               ))}
 
-              {/* Placeholder for future services */}
               <motion.div
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
