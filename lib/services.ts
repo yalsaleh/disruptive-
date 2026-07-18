@@ -24,6 +24,7 @@ export const SERVICES: Service[] = [
     logoWidth: 629,
     logoHeight: 480,
     accent: "#FF9815",
+    href: "https://yalla-sim.com",
     status: "live",
   },
   {
@@ -36,6 +37,7 @@ export const SERVICES: Service[] = [
     logoWidth: 1913,
     logoHeight: 467,
     accent: "#111210",
+    href: "https://mnaqsa.com",
     status: "live",
   },
   {
@@ -48,6 +50,7 @@ export const SERVICES: Service[] = [
     logoWidth: 900,
     logoHeight: 768,
     accent: "#6B7280",
+    href: "https://wathefni.ai",
     status: "live",
   },
 ]

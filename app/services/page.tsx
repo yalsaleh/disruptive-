@@ -51,22 +51,53 @@ export default function ServicesPage() {
                   transition={{ delay: 0.1 + i * 0.08, duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
                   className="group flex flex-col items-center text-center"
                 >
-                  <div className="relative mb-8 h-40 w-full max-w-[300px] transition-transform duration-500 ease-out group-hover:-translate-y-1 md:mb-10 md:h-48 md:max-w-[340px]">
-                    <Image
-                      src={service.logo}
-                      alt={service.name}
-                      fill
-                      unoptimized
-                      priority={i < 3}
-                      sizes="(max-width: 768px) 300px, 340px"
-                      className="object-contain object-center"
-                    />
-                  </div>
+                  {service.href ? (
+                    <a
+                      href={service.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative mb-8 block h-40 w-full max-w-[300px] transition-transform duration-500 ease-out group-hover:-translate-y-1 md:mb-10 md:h-48 md:max-w-[340px]"
+                      aria-label={`Visit ${service.name}`}
+                    >
+                      <Image
+                        src={service.logo}
+                        alt={service.name}
+                        fill
+                        unoptimized
+                        priority={i < 3}
+                        sizes="(max-width: 768px) 300px, 340px"
+                        className="object-contain object-center"
+                      />
+                    </a>
+                  ) : (
+                    <div className="relative mb-8 h-40 w-full max-w-[300px] transition-transform duration-500 ease-out group-hover:-translate-y-1 md:mb-10 md:h-48 md:max-w-[340px]">
+                      <Image
+                        src={service.logo}
+                        alt={service.name}
+                        fill
+                        unoptimized
+                        priority={i < 3}
+                        sizes="(max-width: 768px) 300px, 340px"
+                        className="object-contain object-center"
+                      />
+                    </div>
+                  )}
 
                   <div className="mb-3 flex items-center justify-center gap-2.5">
-                    <h2 className="font-display text-2xl font-semibold tracking-tight text-brand-ink">
-                      {service.name}
-                    </h2>
+                    {service.href ? (
+                      <a
+                        href={service.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-display text-2xl font-semibold tracking-tight text-brand-ink transition-colors hover:text-brand-ink/70"
+                      >
+                        {service.name}
+                      </a>
+                    ) : (
+                      <h2 className="font-display text-2xl font-semibold tracking-tight text-brand-ink">
+                        {service.name}
+                      </h2>
+                    )}
                     <span
                       className="font-body text-[10px] font-semibold uppercase tracking-[0.14em]"
                       style={{ color: service.accent }}
