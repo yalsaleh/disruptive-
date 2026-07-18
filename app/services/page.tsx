@@ -60,7 +60,7 @@ export default function ServicesPage() {
                         alt={service.name}
                         width={220}
                         height={160}
-                        className="h-auto max-h-24 w-auto object-contain mix-blend-multiply"
+                        className="h-auto max-h-24 w-auto object-contain"
                       />
                     </div>
 

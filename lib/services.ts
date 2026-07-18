@@ -22,12 +22,12 @@ export const SERVICES: Service[] = [
     status: "live",
   },
   {
-    id: "munaqasah",
-    name: "Munaqasah",
+    id: "mnaqsa",
+    name: "Mnaqsa",
     tagline: "Tenders, found for you.",
     description:
       "Search the tenders market in one place and get timely alerts straight to WhatsApp — so you never miss an opportunity.",
-    logo: "/brand/munaqasah.png",
+    logo: "/brand/mnaqsa.png",
     accent: "#111210",
     status: "live",
   },

@@ -63,7 +63,7 @@ export function OwnedServicesSection() {
                   alt={primary.name}
                   width={320}
                   height={230}
-                  className="h-auto w-[min(70%,240px)] object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-[1.03] md:w-[min(80%,280px)]"
+                  className="h-auto w-[min(70%,240px)] object-contain transition-transform duration-500 group-hover:scale-[1.03] md:w-[min(80%,280px)]"
                 />
               </div>
               <div className="relative z-10 flex flex-1 flex-col justify-center border-t border-white/40 px-7 py-8 md:border-l md:border-t-0 md:px-10 md:py-12">
