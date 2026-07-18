@@ -51,15 +51,15 @@ export default function ServicesPage() {
                   transition={{ delay: 0.08 + i * 0.06, duration: 0.55 }}
                   className="group relative flex h-full flex-col border border-brand-ink/12 bg-white p-8 transition-colors duration-300 hover:border-brand-ink/25 md:p-9"
                 >
-                  <div className="mb-8 flex h-28 shrink-0 items-center justify-center border-b border-brand-ink/10 pb-8">
-                    <div className="relative h-20 w-full max-w-[210px]">
+                  <div className="mb-8 flex h-40 shrink-0 items-center justify-center border-b border-brand-ink/10 pb-8">
+                    <div className="relative h-32 w-full max-w-[280px]">
                       <Image
                         src={service.logo}
                         alt={service.name}
                         fill
                         unoptimized
                         priority={i < 3}
-                        sizes="210px"
+                        sizes="280px"
                         className="object-contain object-center"
                       />
                     </div>
